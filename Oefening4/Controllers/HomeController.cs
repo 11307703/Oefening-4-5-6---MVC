@@ -16,15 +16,10 @@ namespace Oefening4.Controllers
         }
 
 
-        public IActionResult ViewBagClientLocations()
+        public IActionResult Index()
         {
             ViewBag.ClientCount = Database.Clients.Count;
             ViewBag.LocationCount = Database.Locations.Count;
-            return View();
-        }
-
-        public IActionResult Index()
-        {
             return View();
         }
 

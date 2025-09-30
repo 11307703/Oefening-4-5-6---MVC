@@ -12,7 +12,6 @@ namespace Oefening4
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
-            Database.StartDatabase();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -32,6 +31,8 @@ namespace Oefening4
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            Database.StartDatabase();
+
             app.Run();
         }
     }
