@@ -1,0 +1,13 @@
+﻿@using Oefening4.Data
+@{
+    ViewData["Title"] = "Home Page";
+    int clientCount = (int)ViewBag.ClientCount;
+    int locationCount = (int)ViewBag.LocationCount;
+
+}
+<h1>The database has been started in Program.cs</h1>
+<div class="text-center">
+    
+    <h4>Client records: @clientCount</h4>
+    <h4>Location records: @locationCount</h4>
+</div>
