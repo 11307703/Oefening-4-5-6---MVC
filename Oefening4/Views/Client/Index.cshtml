@@ -1,0 +1,28 @@
+﻿@model List<Oefening4.Models.Client>;
+@{
+}
+<h1>Clients</h1>
+<a asp-action="Create">Create new</a>
+
+<table>
+	<thead>
+			<tr>
+			<th scope="col">ClientId</th>
+			<th scope="col">LocationId</th>
+			<th scope="col">ClientName</th>
+			<th scope="col"></th>
+			</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+		<tr>
+			<td>@item.ClientID</td>
+			<td>@item.LocationID</td>
+			<td>@item.ClientName</td>
+		</tr>	
+		}
+
+	</tbody>
+
+</table>

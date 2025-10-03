@@ -2,7 +2,10 @@
 {
     public class Client
     {
-
+        public Client()
+        {
+            
+        }
         public Client(int clientId, int locId, string name)
         {
             ClientID = clientId;

@@ -1,0 +1,19 @@
+﻿@model Oefening4.Models.Client;
+@{
+}
+<h1>Create</h1>
+<h2>Client</h2>
+
+<form asp-action="Create" method="post">
+	<div asp-validation-summary="All" class="text-danger" ></div>
+	<label asp-for="ClientID" class="form-control">ClientId</label>
+	<input asp-for="ClientID" class="form-control" type="number" />
+
+	<label asp-for="LocationID" class="form-control">LocationId</label>
+	<input asp-for="LocationID" class="form-control" type="number" />
+
+	<label asp-for="ClientName" class="form-control">ClientName</label>
+	<input asp-for="ClientName" class="form-control" type="text" />
+
+	<button type="submit">Create</button>
+</form>
