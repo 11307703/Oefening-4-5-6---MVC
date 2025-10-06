@@ -31,11 +31,21 @@ namespace Oefening4.Controllers
                     ModelState.AddModelError("ClientId", "ClientId already exists");
                     return View(c);
                 }
-                clients.Add(c);
+                Database.AddClient(c);
                 return RedirectToAction("Index", "Client");
             }
             return View();
            
         }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var clients = Database.Clients.FirstOrDefault(x => x.ClientID == id);
+            Database.Clients.Remove(clients);
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

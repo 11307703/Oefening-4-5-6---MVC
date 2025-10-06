@@ -1,3 +1,22 @@
-﻿
+﻿@model IEnumerable<Oefening4.Models.ClientLocation>
 @{
 }
+<h1>Client Location</h1>
+
+<table class="border table-bordered">
+    <thead>
+        <tr>
+            <th>ClientName</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ClientName</td>
+                <td>@item.City</td>
+            </tr>
+        }
+    </tbody>
+</table>

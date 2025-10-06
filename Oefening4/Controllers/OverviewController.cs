@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Oefening4.Models;
 
 namespace Oefening4.Controllers
 {
@@ -6,7 +7,8 @@ namespace Oefening4.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var overView = ClientLocation.OverView();
+            return View(overView);
         }
     }
 }

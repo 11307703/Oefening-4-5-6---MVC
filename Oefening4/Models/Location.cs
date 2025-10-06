@@ -2,6 +2,11 @@
 {
     public class Location
     {
+
+        public Location()
+        {
+            
+        }
         public Location(int id, string postCode, string city)
         {
             LocationID = id;
