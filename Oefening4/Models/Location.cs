@@ -1,4 +1,6 @@
-﻿namespace Oefening4.Models
+﻿using Oefening4.ModelValidations;
+
+namespace Oefening4.Models
 {
     public class Location
     {
@@ -15,6 +17,7 @@
         }
 
         public int LocationID { get; set; }
+        [CustomPostcode]
         public string PostCode { get; set; }
         public string City { get; set; }
     }

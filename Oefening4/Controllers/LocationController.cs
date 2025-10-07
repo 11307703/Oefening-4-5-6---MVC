@@ -39,8 +39,9 @@ namespace Oefening4.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var locations = Database.Locations.FirstOrDefault(x => x.LocationID == id);
-            Database.Locations.Remove(locations);
+            var location = Database.Locations.FirstOrDefault(x => x.LocationID == id);
+            Database.Locations.Remove(location);
+
             return RedirectToAction("Index");
         }
 
